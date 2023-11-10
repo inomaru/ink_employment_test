@@ -1,7 +1,7 @@
 # MUGENUP Save Point事業部 技術試験
 
-当リポジトリは、MUGENUP Inc. Save Point事業部技術試験のリポジトリとなります。
-一次面接の通過者が対象となっております。
+当リポジトリは、MUGENUP Inc. Save Point事業部技術試験のリポジトリとなります。  
+一次面接の通過者が対象となっております。  
 [Green](https://www.green-japan.com/company/2662)にて、採用を行っておりますので、ご興味のある方はふるってご参加ください。
 
 ## 回答方法
