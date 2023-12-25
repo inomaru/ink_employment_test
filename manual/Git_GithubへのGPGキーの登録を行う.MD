@@ -11,6 +11,8 @@
 $ gh gpg-key list
 ```
 
+- `PUBLIC KEY`をコピー
+
 
 ## GithubへSSHキーを登録
 
@@ -18,10 +20,10 @@ $ gh gpg-key list
 1. settings
 1. SSH and GPG keys
 1. New SSH key
-    1. titleは `適当なもの` を入力
+    1. titleは`適当なもの`を入力
         - 例）ED_SSH_GPG_PUB_KEY_231225
-    1. Key typeは `Authentication Key`
-    1. Keyに `先ほど確認したキー` を設定
+    1. Key typeは`Authentication Key`
+    1. Keyに先ほど確認した`PUBLIC KEY`を設定
 
 
 ## 接続を確認
