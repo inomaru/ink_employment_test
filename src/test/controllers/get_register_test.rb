@@ -87,4 +87,13 @@ class GetRegisterTest < ActionDispatch::IntegrationTest
       @user.save
     end
   end
+  test "ユーザー作成時はデフォルトでuserの権限を持っている" do
+    get '/register'
+      @user = User.new(
+          email: 'registration_example_user@gmail.com',
+          password: 'Password111111??!',
+      )
+    @user.save
+    assert_equal 'user', @user.auth_level
+  end
 end
