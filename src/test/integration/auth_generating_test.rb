@@ -21,8 +21,8 @@ class AuthGeneratingTest < ActionDispatch::IntegrationTest
     @user = users( :alice )
     login_as(@user, :scope => :user)
     get '/auth'
-    assert_select ":match('value', ?)",
-      'Token Generate',
+    assert_select "button",
+      text: 'Token Generate',
       count: 1
   end
   test "ログイン済みのユーザーはデフォルトではトークンを持たない" do

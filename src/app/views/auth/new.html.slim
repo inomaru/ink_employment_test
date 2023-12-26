@@ -1,4 +1,2 @@
-
-= button_to 'Token Generate',
-  auth_url,
-  method: :post
+= link_to auth_url, method: :post do
+  button Token Generate
