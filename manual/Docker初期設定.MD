@@ -15,3 +15,9 @@
 ```dat:/etc/hosts
 echo '127.0.0.1 emp-test.localhost' >> /etc/hosts
 ```
+
+## ブラウザでアクセス
+1. https://emp-test.localhost/
+1. 「この接続ではプライバシーが保護されません」と出ますがアクセスできます。
+    1. 詳細設定
+    1. emp-test.localhost にアクセスする（安全ではありません）
