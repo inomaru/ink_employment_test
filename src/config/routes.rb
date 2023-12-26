@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'application#top'
   get '/hello_world', to: 'application#hello'
   get '/api/hello_world', to: 'application#api_hello'
+  get '/register', to: 'application#register'
   devise_for :users
 end
