@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/register', to: 'application#register'
   post '/logout', to: 'application#logout'
   get '/auth', to: 'auth#new'
+  post '/auth', to: 'auth#create'
   devise_for :users
   devise_scope :user do
     get '/logout', to: 'devise/sessions#destroy'
