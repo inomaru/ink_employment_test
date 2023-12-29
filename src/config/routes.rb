@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'application#top'
   get '/hello_world', to: 'application#hello'
   get '/api/hello_world', to: 'application#api_hello_world'
+  get '/api/users', to: 'application#api_users'
   get '/register', to: 'application#register'
   post '/logout', to: 'application#logout'
   get '/auth', to: 'auth#new'

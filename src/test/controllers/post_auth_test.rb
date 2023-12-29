@@ -4,7 +4,7 @@ include Warden::Test::Helpers
 class PostAuthTest < ActionDispatch::IntegrationTest
   test "ログイン済みのユーザーはトークンを発行できる" do
     Warden.test_mode!
-    user = users( :alice )
+    user = users( :alice_without_token )
     login_as(user, :scope => :user)
     assert_empty(user.token)
     post '/auth'

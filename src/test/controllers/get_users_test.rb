@@ -13,7 +13,7 @@ class GetUsersTest < ActionDispatch::IntegrationTest
   end
   test "adminロールを持たないログインユーザーはユーザー情報が表示されない" do
     Warden.test_mode!
-    user = users( :non_admin_user )
+    user = users( :snow )
     login_as(user, :scope => :user)
     get '/users'
     assert_select"td.user-info", {
