@@ -6,10 +6,10 @@ class AuthController < ApplicationController
   end
 
   def create
+    # ランダムな30文字のtokenを発行
     return_token = SecureRandom.alphanumeric(30)
-    token = BCrypt::Password.create(return_token)
     current_user.update(
-      token: token
+      token: return_token
     )
     render inline: "<p id='generated_token'>token: #{return_token}</p>"
   end

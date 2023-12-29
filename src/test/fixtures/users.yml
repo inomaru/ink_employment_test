@@ -1,3 +1,7 @@
 alice:
   email: "alice@example.com"
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+alice_has_token:
+  email: "alice_has_token@example.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  token: 'alice_token'
