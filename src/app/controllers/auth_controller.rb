@@ -11,9 +11,6 @@ class AuthController < ApplicationController
     current_user.update(
       token: token
     )
-    render json: {
-      token: return_token,
-      status: 200,
-    }
+    render inline: "<p id='generated_token'>token: #{return_token}</p>"
   end
 end
