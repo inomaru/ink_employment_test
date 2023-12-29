@@ -3,15 +3,16 @@ alice:
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   auth_level: 'admin'
   token: 'alice_token'
-alice_without_token:
-  email: "alice_without_token@example.com"
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 snow:
   email: "snow@example.com"
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   auth_level: 'user'
   token: 'snow_token'
-snow_without_token:
-  email: "snow_without_token@example.com"
+
+# 最大ユーザー数40人から上記の人数を引いた数
+<% 38.times do |n| %>
+user_<%= n %>:
+  email: <%= "user#{n}@example.com" %>
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
-  auth_level: 'user'
+  auth_level: <%= "#{n%2==0 ? 'admin' : 'user'}" %>
+<% end %>
