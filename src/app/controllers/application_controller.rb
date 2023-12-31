@@ -16,11 +16,4 @@ class ApplicationController < ActionController::Base
       redirect_to new_user_registration_url
     end
   end
-  def logout
-    if user_signed_in?
-      redirect_to destroy_user_session_url(current_user)
-    else
-      redirect_to new_user_registration_url
-    end
-  end
 end
