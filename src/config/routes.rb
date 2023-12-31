@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/hello_world', to: 'application#hello'
   get '/api/hello_world', to: 'application#api_hello'
   get '/register', to: 'application#register'
+  post '/logout', to: 'application#logout'
+  get '/auth', to: 'auth#new'
   devise_for :users
   devise_scope :user do
     get '/logout', to: 'devise/sessions#destroy'
