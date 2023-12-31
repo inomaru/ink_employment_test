@@ -1,7 +1,12 @@
 alice:
   email: "alice@example.com"
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  auth_level: 'admin'
 alice_has_token:
   email: "alice_has_token@example.com"
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   token: 'alice_token'
+non_admin_user:
+  email: "non_admin_user@example.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  auth_level: 'user'

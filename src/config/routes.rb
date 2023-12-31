@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/logout', to: 'devise/sessions#destroy'
   end
+  get '/users', to: 'application#users'
 end

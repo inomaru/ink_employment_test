@@ -4,6 +4,10 @@ if User.where(auth_level: 'admin').count == 0
       email: 'first_admin_user@example.com',
       password: 'Password111111??!',
       auth_level: 'admin',
+    },
+    {
+      email: 'un_admin_user@example.com',
+      password: 'Password111111??!',
     }
   ])
 end

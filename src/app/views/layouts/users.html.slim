@@ -1,0 +1,14 @@
+- if @users
+  table(style="text-align: left;")
+    thead
+      tr
+        th Name
+        th Email
+    tbody
+      - @users.each do |user|
+        tr
+          td.user-info = user.email
+          td.user-info = user.auth_level
+- else
+  p
+    | 権限がありません。
