@@ -20,3 +20,13 @@ services:
       MYSQL_ROOT_PASSWORD: password
     depends_on:
       - mysql
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - '443:443'
+    links:
+      - rails
+    restart: always
+    environment:
+      DOMAINS: 'emp-test.localhost -> http://rails:3000'
+      STAGE: 'local'
