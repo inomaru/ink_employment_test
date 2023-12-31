@@ -10,6 +10,9 @@ module Src
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    
+    # 今後自動的に作成されるファイルはslim
+    config.generators.template_engine = :slim
 
     # Configuration for the application, engines, and railties goes here.
     #
