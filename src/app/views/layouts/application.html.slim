@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title
+      | Src
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  body
+    header
+      - if notice
+        p.notice
+          = notice
+      - if alert
+        p.alert
+          = alert
+    = yield
+    - if user_signed_in?
+      = button_to "ログアウト", destroy_user_session_path, method: :delete
